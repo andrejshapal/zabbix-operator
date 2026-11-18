@@ -1,0 +1,22 @@
+  service:
+    type: ClusterIP
+    clusterIP:
+    externalIPs: []
+    loadBalancerIP: ""
+    loadBalancerSourceRanges: []
+    loadBalancerClass: ""
+    port: 10051
+    nodePort: 31051
+    annotations: {}
+  extraEnv: []
+  # - name: ENABLE_TIMESCALEDB
+  #   value: "true"
+  extraVolumeMounts: []
+  extraContainers: []
+  extraInitContainers: []
+  extraVolumes: []
+  securityContext: {}
+  livenessProbe: {}
+  readinessProbe: {}
+  startupProbe: {}
+  nodeSelector: {}

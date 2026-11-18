@@ -1,0 +1,44 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - apps
+  resources:
+  - deployments
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - zabbix.swisscom.com
+  resources:
+  - zabbixinstances
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - zabbix.swisscom.com
+  resources:
+  - zabbixinstances/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - zabbix.swisscom.com
+  resources:
+  - zabbixinstances/status
+  verbs:
+  - get
+  - patch
+  - update

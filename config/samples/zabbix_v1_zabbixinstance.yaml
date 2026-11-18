@@ -1,0 +1,8 @@
+apiVersion: zabbix.swisscom.com/v1
+kind: ZabbixInstance
+metadata:
+  labels:
+    app.kubernetes.io/name: zabbix-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: zabbixinstance-sample
+spec: {}
